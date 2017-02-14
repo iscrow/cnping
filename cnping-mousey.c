@@ -29,7 +29,7 @@ uint8_t pattern[8];
 
 int notemode = 0;
 
-#define PINGCYCLEWIDTH 1024
+#define PINGCYCLEWIDTH 4096
 #define TIMEOUT 4
 
 double PingSendTimes[PINGCYCLEWIDTH];
@@ -100,24 +100,30 @@ void HandleKey( int keycode, int bDown )
 
 	switch( keycode )
 	{
-	case 'a': note = 0; break;
-	case 'w': note = 1; break;
-	case 's': note = 2; break;
-	case 'e': note = 3; break;
-	case 'd': note = 4; break;
-	case 'f': note = 5; break;
-	case 't': note = 6; break;
-	case 'g': note = 7; break;
-	case 'y': note = 8; break;
-	case 'h': note = 9; break;
-	case 'u': note = 10; break;
-	case 'j': note = 11; break;
-	case 'k': note = 12; break;
-	case 'o': note = 13; break;
-	case 'l': note = 14; break;
-	case 'p': note = 15; break;
-	case ';': note = 16; break;
-	case '\'': note = 17; break;
+	case 'q': note = 0; break;
+	case 'a': note = 1; break;
+	case 'w': note = 2; break;
+	case 's': note = 3; break;
+	case 'e': note = 4; break;
+	case 'd': note = 5; break;
+	case 'r': note = 6; break;
+	case 'f': note = 7; break;
+	case 't': note = 8; break;
+	case 'g': note = 9; break;
+	case 'y': note = 10; break;
+	case 'h': note = 11; break;
+	case 'u': note = 12; break;
+	case 'j': note = 13; break;
+	case 'i': note = 14; break;
+	case 'k': note = 15; break;
+	case 'o': note = 16; break;
+	case 'l': note = 17; break;
+	case 'p': note = 18; break;
+	case ';': note = 19; break;
+	case '[': note = 20; break;
+	case '\'': note = 21; break;
+	case ']': note = 22; break;
+	case '\\': note = 23; break;
 	}
 
 	if( note >= 0 )
